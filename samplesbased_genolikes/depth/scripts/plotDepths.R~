@@ -1,0 +1,27 @@
+# Rscript plotDepths.R outmain group1 group2 (...)
+# jsut takes main folder and then id of groups that depths was done with, assumes there exists dist and median files for those groups
+
+args <- commandArgs(trailingOnly=T)
+
+infile <- args[1]
+outpng <- args[2]
+group <- args[3]
+low_thres <- args[4]
+high_thres <- args[5]
+
+   
+a <- scan(infile), what=1)
+med <- median(rep.int(0:maxdepth, a))
+max <- med * 3
+a <- c(a[1:max], sum(a[(max+1):(length(a))]))
+
+
+
+bitmap(outpng, width=4, height=3, res=300)
+
+barplot(a, names.arg=0:max, main=paste("Depth distribution", group), space=0, border=NA)
+abline(v=med, col=1, lty=1)
+abline(v=low_thres, col=2, lty=2)
+abline(v=high_thres, col=2, lty=2)
+
+dev.off()

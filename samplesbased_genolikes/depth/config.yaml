@@ -1,0 +1,16 @@
+groups:
+ mediumdepth:
+  bamlist: /home/genis/other/buffalo/sites_filters/depth/mediumdepth_bams.list
+  mindep: 1
+  maxdep: 2
+ highdepth:
+  bamlist: /home/genis/other/buffalo/sites_filters/depth/highdepth_bams.list
+  mindep: 1
+  maxdep: 2
+outmain: results
+chroms: /davidData/genis/references/bosTau9/bosTau9_autosomes.list
+angsdparams:
+ maxdepth: 5000
+ minQ: 30
+ minMapQ: 30
+allbed: /davidData/genis/references/bosTau9/bosTau9_autosomes.bed

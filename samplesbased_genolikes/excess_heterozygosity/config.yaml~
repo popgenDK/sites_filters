@@ -1,0 +1,17 @@
+info: /home/genis/other/buffalo/info/africanBuff_samples.info
+outmain: "results"
+scriptsdir: "scripts"
+chroms: /davidData/genis/references/bosTau9/bosTau9_autosomes.list
+ref: /steveData/liam/results/ref/bosTau9.fa.gz
+params:
+ angsd:
+  minQ: 30
+  minMapQ: 30
+ pcangsd:
+  e: 2
+ filter:
+  minF: -0.9
+  w: 10000
+  lrt: 24
+  
+  
